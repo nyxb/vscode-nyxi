@@ -23,6 +23,9 @@ devDependencies:
   execa:
     specifier: ^7.1.1
     version: 7.1.1
+  nyxi-for-vscode:
+    specifier: ^0.0.3
+    version: 0.0.3
   tsup:
     specifier: ^6.7.0
     version: 6.7.0(typescript@5.1.3)
@@ -2646,6 +2649,10 @@ packages:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
     dependencies:
       boolbase: 1.0.0
+    dev: true
+
+  /nyxi-for-vscode@0.0.3:
+    resolution: {integrity: sha512-r+s6NPnSSIsIe1qrQYpS/8oxKG6IW9G2H5MNScIP12FhIhV0wb9ZzTIu4OUpOKYwWjpCFz/cNqxlwwtqT90AKw==}
     dev: true
 
   /object-assign@4.1.1:
