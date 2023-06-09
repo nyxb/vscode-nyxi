@@ -1,0 +1,128 @@
+{
+  "name": "vscode-nyxi",
+  "displayName": "vscode-nyxi",
+  "description": "🔧 Using @nyxb/nyxi via vscode extension.",
+  "version": "0.0.1",
+  "publisher": "nyxb",
+  "author": "Dennis Ollhoff <contact@nyxb.xyz>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyxb/vscode-nyxi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxb/vscode-nyxi/issues"
+  },
+  "keywords": [
+    "package-manager",
+    "npm",
+    "yarn",
+    "pnpm",
+    "vscode",
+    "vscode-extension"
+  ],
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nyxi",
+        "title": "Nyxi"
+      },
+      {
+        "command": "nyxi.nyxi",
+        "title": "Install [nyxi]"
+      },
+      {
+        "command": "nyxi.nyxr",
+        "title": "Run [nyxr]"
+      },
+      {
+        "command": "nyxi.nyxlx",
+        "title": "Execute [nyxlx]"
+      },
+      {
+        "command": "nyxi.nyxu",
+        "title": "Upgrade [nyxu]"
+      },
+      {
+        "command": "nyxi.nyxun",
+        "title": "Uninstall [nyxun]"
+      },
+      {
+        "command": "nyxi.nyxci",
+        "title": "Clean Install [nyxci]"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "nyxi",
+          "group": "nyxi"
+        },
+        {
+          "submenu": "nyxi.editor.context",
+          "group": "nyxi"
+        }
+      ],
+      "nyxi.editor.context": [
+        {
+          "command": "nyxi.nyxi",
+          "group": "nyxi"
+        },
+        {
+          "command": "nyxi.nyxr",
+          "group": "nyxi"
+        },
+        {
+          "command": "nyxi.nyxlx",
+          "group": "nyxi"
+        },
+        {
+          "command": "nyxi.nyxu",
+          "group": "nyxi"
+        },
+        {
+          "command": "nyxi.nyxun",
+          "group": "nyxi"
+        },
+        {
+          "command": "nyxi.nyxci",
+          "group": "nyxi"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "nyxi.editor.context",
+        "label": "Nyxi Commands"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "nyxr build",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "test": "nyxr build && node ./node_modules/vscode/bin/test",
+    "release": "bumpp package.json --commit --push --tag && vsce publish"
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "^0.0.53",
+    "@nyxb/nyxi": "^0.0.30",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.2.5",
+    "@types/vscode": "^1.79.0",
+    "execa": "^7.1.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.3"
+  },
+  "files": []
+}
