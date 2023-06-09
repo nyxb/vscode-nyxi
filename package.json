@@ -2,7 +2,7 @@
   "publisher": "nyxb",
   "name": "vscode-nyxi",
   "displayName": "vscode-nyxi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "🔧 Using @nyxb/nyxi via vscode extension.",
   "author": "Dennis Ollhoff <contact@nyxb.xyz>",
   "license": "MIT",
