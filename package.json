@@ -28,7 +28,7 @@
   "icon": "logo.png",
   "files": [],
   "engines": {
-    "vscode": "^1.64.0"
+    "vscode": "^1.79.0"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -114,7 +114,7 @@
     "build": "tsup",
     "watch": "tsup --watch",
     "test": "nyxr build && node ./node_modules/vscode/bin/test",
-    "release": "nyxlx changelogen@latest --release && vsce publish"
+    "release": "nyxlx changelogen@latest --release && vsce publish --no-dependencies"
   },
   "devDependencies": {
     "@nyxb/eslint-config": "^0.0.53",
